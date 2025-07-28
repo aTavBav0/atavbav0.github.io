@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TavBav99's Mod Archive</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #1e1e1e;
+    color: #eee;
+    margin: 0;
+    padding: 0 20px;
+  }
+  header {
+    padding: 20px 0;
+    text-align: center;
+    background: #333;
+    border-bottom: 2px solid #4caf50;
+  }
+  h1 {
+    margin: 0;
+  }
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  .mod-list {
+    list-style: none;
+    padding: 0;
+  }
+  .mod-item {
+    background: #2a2a2a;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 5px solid #4caf50;
+  }
+  .mod-title {
+    font-size: 1.2em;
+    margin: 0 0 8px 0;
+  }
+  .mod-description {
+    margin: 0 0 10px 0;
+    color: #bbb;
+  }
+  .mod-download {
+    text-decoration: none;
+    background: #4caf50;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  .mod-download:hover {
+    background: #45a049;
+  }
+  select.version-select {
+    margin-right: 10px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: none;
+  }
+  footer {
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    margin: 40px 0 20px 0;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>TavBav99's Mod Archive</h1>
+</header>
+<main>
+  <ul class="mod-list">
+    <li class="mod-item">
+      <h2 class="mod-title">Flint' n Sticks</h2>
+      <p class="mod-description">Adds Some Flint Based Items.</p>
+      <label for="fns-version">Choose version:</label>
+      <select id="fns-version" class="version-select" onchange="updateDownloadLink()">
+        <option value="mods/fns/flintnsticks-1.0.0-neoforge-1.21.4.jar">1.0.0 (NeoForge 1.21.4)</option>
+        <option value="mods/fns/flintnsticks-1.0.2-neoforge-1.21.4.jar">1.0.2 (NeoForge 1.21.4)</option>
+      </select>
+      <a id="fns-download" href="mods/fns/flintnsticks-1.0.0.jar" class="mod-download" download>Download</a>
+    </li>
+  </ul>
+</main>
+<footer>
+  &copy; 2025 TavBav99. All rights reserved.
+</footer>
+
+<script>
+  function updateDownloadLink() {
+    const select = document.getElementById('fns-version');
+    const downloadLink = document.getElementById('fns-download');
+    downloadLink.href = select.value;
+  }
+</script>
+</body>
+</html>
